@@ -150,18 +150,23 @@
 1. Docker安装问题：换个源就解决了
 2. Go build 发生connection denined:原因是默认使用的是proxy.golang.org，在国内无法访问。
     - 解决方法：go env -w GOPROXY=https://goproxy.cn重新执行命令，可以正常执行！
+3. 关于攻击者/受害者谁是蜜罐谁是小蜜蜂的问题，我很容易混，所以在这里再次记录复习一下：
+    - **就本实验而言：HoneyPot=受害者=`176.16.111.109`**
+    - 受害者有个蜜罐，勾引攻击者来攻击
+    - 攻击者的敏感信息暴露，受害者获取到了他的操作和信息
+    - 蜜罐要越真实越好，吸引攻击者来攻击
 
 
 ## 参考链接
 
-1. [cowrie](https://github.com/cowrie/cowrie)
+1. [Github-Cowrie](https://github.com/cowrie/cowrie)
 
-2. [sshesame](https://github.com/jaksi/sshesame)
+2. [Github-jaski/sshesame](https://github.com/jaksi/sshesame)
 
-3. [老师的课件](https://c4pr1c3.gitee.io/cuc-ns/chap0x11/main.html)
+3. [第十一章课件](https://c4pr1c3.gitee.io/cuc-ns/chap0x11/main.html)
 
-4. [蜜罐检测](https://www.zhihu.com/question/31213254)
+4. [蜜罐的识别和检测](https://www.zhihu.com/question/31213254)
 
-5. [docker cp命令](https://www.runoob.com/docker/docker-cp-command.html)
+5. [docker cp命令详解](https://www.runoob.com/docker/docker-cp-command.html)
 
 6. [师哥/师姐的作业](https://github.com/CUCCS/2018-NS-Public-jckling/blob/master/ns-0x11/0x11.md)
